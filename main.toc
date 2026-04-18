@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción}{4}{0}{1}
+\beamer@sectionintoc {2}{Descripción del algoritmo}{5}{0}{2}
+\beamer@sectionintoc {3}{Fundamento matemático}{6}{0}{3}
+\beamer@sectionintoc {4}{Ejemplo: Desarrollo paso a paso}{7}{0}{4}
+\beamer@sectionintoc {5}{Explicación del pseudocódigo}{8}{0}{5}
+\beamer@sectionintoc {6}{Simulación del algoritmo}{9}{0}{6}
+\beamer@sectionintoc {7}{Conclusiones}{10}{0}{7}
+\beamer@sectionintoc {8}{Bibliografía y webgrafía}{11}{0}{8}

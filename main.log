@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.12)  18 APR 2026 12:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.12)  18 APR 2026 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -801,18 +801,12 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 )
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
 -spanish.tex)
-Package babel Info: Importing font and identification data for Spanish
+Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 4321.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
 df
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-
-(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
--spanish.tex
-Package babel Info: Importing font and identification data for spanish
-(babel)             from babel-es.ini. Reported on input line 12.
-)
 \es@quottoks=\toks48
 \es@quotdepth=\count360
 Package babel Info: Making " an active character on input line 570.
@@ -824,13 +818,11 @@ LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1)
 on input line 4.
 LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
  on input line 4.
-
-(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/esvect\esvect.sty
+ (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/esvect\esvect.sty
 Package: esvect 
 \symesvector=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \fldr on input line 38.
-)
-(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+) (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip67
 \enit@outerparindent=\dimen303
@@ -838,8 +830,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box78
 \enit@count@id=\count361
 \enitdp@description=\count362
-)
-(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
+) (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box79
 )
@@ -941,10 +932,10 @@ tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count384
 ) (main.aux
-(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
--spanish.tex)
-Package babel Info: Importing data for spanish
-(babel)             from babel-es.ini. Reported on input line 11.
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 11.
 )
 \openout1 = `main.aux'.
 
@@ -1059,42 +1050,25 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 37.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (main.nav)
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
 <ucologo.png, id=58, 279.9258pt x 146.949pt>
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
 Package pdftex.def Info: ucologo.png  used on input line 39.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
  [1
 
 {C:/Users/alexb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ucologo.pn
 g>]
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
 Package pdftex.def Info: ucologo.png  used on input line 55.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
  [2
 
-]
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
- (main.toc
+] (main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1102,89 +1076,43 @@ File: ucologo.png Graphic file (type png)
 <use ucologo.png>
 Package pdftex.def Info: ucologo.png  used on input line 59.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
  [3
 
 ]
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
 Package pdftex.def Info: ucologo.png  used on input line 65.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
  [4
 
 ]
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
 Package pdftex.def Info: ucologo.png  used on input line 71.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
 
 [5
 
 ]
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
-File: ucologo.png Graphic file (type png)
-<use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 77.
-(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
- [6
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
 
-]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
-File: ucologo.png Graphic file (type png)
-<use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 83.
-(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [7
-
-]
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
-File: ucologo.png Graphic file (type png)
-<use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 89.
-(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
- [8
-
-]
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
-
-
-(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-95.
+81.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 95.
+ut line 81.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathk
 erncmss.fd
@@ -1193,33 +1121,65 @@ thkerncmss.
 )
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 95.
+Package pdftex.def Info: ucologo.png  used on input line 81.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
+ [6
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 98.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [7
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 116.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [8
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 136.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [9
 
 ]
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 101.
+Package pdftex.def Info: ucologo.png  used on input line 142.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
  [10
 
 ]
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 109.
+Package pdftex.def Info: ucologo.png  used on input line 148.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
  [11
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 154.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [12
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 160.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [13
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 168.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [14
 
 ]
 \tf@nav=\write6
@@ -1243,22 +1203,32 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7C4C4B3B9641F22A8FB8EAECDEB3B4A7;1292.
  ) 
 Here is how much of TeX's memory you used:
- 25656 strings out of 467871
- 498344 string characters out of 5418376
- 901113 words of memory out of 5000000
- 53966 multiletter control sequences out of 15000+600000
- 640427 words of font info for 82 fonts, out of 8000000 for 9000
+ 25687 strings out of 467871
+ 499222 string characters out of 5418376
+ 891656 words of memory out of 5000000
+ 53993 multiletter control sequences out of 15000+600000
+ 641384 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,408b,825s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,408b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmss10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmss12.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmss8.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexb/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (11 pages, 117876 bytes).
+cmex10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexb/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/alexb/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/alexb/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/
+alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
+><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mssi10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/alexb/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (14 pages, 226880 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 

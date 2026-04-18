@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
-\usepackage[Spanish]{babel}
+\usepackage[spanish]{babel}
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{amsmath}
@@ -73,12 +73,70 @@
     \section{Fundamento matemático}
 
     \begin{frame}{Fundamento matemático}
+        Para comprender el algoritmo de Dijkstra desde una perspectiva rigurosa, es necesario establecer los fundamentos que garantizan su correctitud. Esta sección presenta las definiciones formales y las propiedades estructurales en las que se basa el algoritmo.
         
+        \begin{definition}[Grafo ponderado]
+        Un grafo ponderado es un par $(G, w)$, donde $G=(V,E)$ es un grafo y $w:E\rightarrow\mathbb{R}^{+}$ es una función que asigna pesos positivos a las aristas del grafo.
+        \end{definition}
+    \end{frame}
+
+    \begin{frame}{Fundamento matemático: Camino y Distancia}
+        \begin{definition}[Camino y su peso]
+        Dado un grafo ponderado $(G, w)$ y un camino $C:v_{0}v_{1}\dots v_{k}$, se define el peso del camino $C$ como la suma de los pesos de las aristas que lo componen:
+        \[
+        w(C)=\sum_{i=1}^{k}w(v_{i-1},v_{i})
+        \]
+        \end{definition}
+        
+        \begin{definition}[Distancia entre vértices]
+        Para dos vértices distintos $u, v \in V$, la distancia $d_{G}(u,v)$ es:
+        \[
+        d_{G}(u,v)=\min\{w(C) \mid C \text{ es un } u\text{-}v \text{ camino}\}
+        \]
+        Si no hay camino, $d_{G}(u,v)=+\infty$.
+        \end{definition}
+    \end{frame}
+
+    \begin{frame}{Principio de optimalidad y Relajación}
+        \textbf{Principio de optimalidad de Bellman}\\
+        Si un camino es mínimo, cualquier subcamino contenido en él también es un camino mínimo entre sus propios extremos.
+        \begin{proof}
+        Si existiera un subcamino más corto, el peso total del camino original podría reducirse, lo que contradice que era el mínimo.
+        \end{proof}
+        
+        \vspace{0.3cm}
+        \textbf{Operación de relajación}\\
+        El algoritmo mantiene para cada vértice $v$ una estimación de su distancia mínima $d[v]$ desde la fuente $s$ (inicialmente $d[s] = 0$ y $d[v] = +\infty$ para el resto).
+        
+        Para cada arista $(u, v) \in E$:
+        \[
+        \text{si } d[u] + w(u,v) < d[v] \implies d[v] \gets d[u] + w(u,v)
+        \]
+    \end{frame}
+
+    \begin{frame}{Condiciones y Complejidad}
+        \textbf{Condición de pesos no negativos}\\
+        Requiere que la función de peso sea $w:E\rightarrow\mathbb{R}^{+}$. Pesos negativos invalidarían la estrategia \textit{greedy}, ya que una distancia "finalizada" podría reducirse posteriormente por un arco negativo.
+        
+        \vspace{0.3cm}
+        \textbf{Complejidad computacional}
+        \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|c|}
+        \hline
+        \textbf{Estructura de datos} & \textbf{Complejidad temporal} \\
+        \hline
+        Lista o Arreglo simple & $O(|V|^2)$ \\
+        Heap binario & $O((|V| + |E|) \log |V|)$ \\
+        Heap de Fibonacci & $O(|E| + |V| \log |V|)$ \\
+        \hline
+        \end{tabular}
+        \end{table}
     \end{frame}
 
     \section{Ejemplo: Desarrollo paso a paso}
 
-    \begin{frame}{Fundamento matemático}
+    \begin{frame}{Ejemplo: Desarrollo paso a paso}
         
     \end{frame}
 

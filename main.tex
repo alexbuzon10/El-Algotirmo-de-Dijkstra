@@ -143,14 +143,33 @@
 
     \section{Explicación del pseudocódigo}
 
-    \begin{frame}{Explicación del algoritmo}
-
+    \begin{frame}{Pseudocódigo del algoritmo}
+        \texttt{
+            \noindent function Dijkstra(Graph, source):\\
+            \qquad dist[source] = 0 \\
+            \qquad for each vertex v in Graph: \\
+            \qquad  \qquad if v != source: \\
+            \qquad \qquad \qquad dist[v] = infinity \\ 
+            \qquad  \qquad add v to Q (unvisited set) \\ 
+            \qquad while Q is not empty: \\
+            \qquad \qquad u = vertex in Q with min dist[u] \\ 
+            \qquad \qquad remove u from Q \\ 
+            \qquad \qquad for each neighbor v of u in Q: \\
+            \qquad \qquad \qquad alt = dist[u] + length(u, v) \\ 
+            \qquad \qquad \qquad if alt < dist[v]: \\
+            \qquad \qquad \qquad \qquad dist[v] = alt \\
+            \qquad \qquad \qquad \qquad prev[v] = u \\
+            \qquad return dist, prev
+        }
     \end{frame}
     
     \section{Simulación del algoritmo}
 
     \begin{frame}{Simulación del algoritmo}
-        En el siguiente enlace encontrarás una simulación del algoritmo programa en \texttt{react.js}: \color{blue}\underline{$\langle$ poner la URL $\rangle$}\color{black} 
+        En el siguiente enlace encontrarás una simulación \textbf{desarrollada por nosotros} del algoritmo programa en \texttt{react.js}: 
+        \color{blue}\\ 
+        \begin{center}\underline{\url{https://djkistra.vercel.app/}}\color{black}\end{center} 
+        \color{black}
     \end{frame}
 
     \section{Conclusiones}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.12)  18 APR 2026 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.12)  18 APR 2026 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -913,6 +913,92 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count382
 \c@blind@pangrammax=\count383
 )
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box81
+)
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen314
+\pgf@nodesepend=\dimen315
+)
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen316
+\pgffor@skip=\dimen317
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
+))
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count384
+\pgfplotmarksize=\dimen318
+)
+\tikz@lastx=\dimen319
+\tikz@lasty=\dimen320
+\tikz@lastxsaved=\dimen321
+\tikz@lastysaved=\dimen322
+\tikz@lastmovetox=\dimen323
+\tikz@lastmovetoy=\dimen324
+\tikzleveldistance=\dimen325
+\tikzsiblingdistance=\dimen326
+\tikz@figbox=\box82
+\tikz@figbox@bg=\box83
+\tikz@tempbox=\box84
+\tikz@tempbox@bg=\box85
+\tikztreelevel=\count385
+\tikznumberofchildren=\count386
+\tikznumberofcurrentchild=\count387
+\tikz@fig@count=\count388
+
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count389
+\pgfmatrixcurrentcolumn=\count390
+\pgf@matrix@numberofcolumns=\count391
+)
+\tikz@expandcount=\count392
+
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen327
+\pgfarrowlength=\dimen328
+\pgfarrowwidth=\dimen329
+\pgfarrowlinewidth=\dimen330
+)
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemeMadri
 d.sty
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolortheme
@@ -930,7 +1016,7 @@ rofessionalfonts.sty)
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count384
+\l__color_backend_stack_int=\count393
 ) (main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -939,24 +1025,24 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -996,17 +1082,17 @@ LaTeX Font Info:    ... okay on input line 37.
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count385
-\scratchdimen=\dimen314
-\scratchbox=\box81
-\nofMPsegments=\count386
-\nofMParguments=\count387
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count388
-\MPscratchDim=\dimen315
-\MPnumerator=\count389
-\makeMPintoPDFobject=\count390
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count394
+\scratchdimen=\dimen331
+\scratchbox=\box86
+\nofMPsegments=\count395
+\nofMParguments=\count396
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count397
+\MPscratchDim=\dimen332
+\MPnumerator=\count398
+\makeMPintoPDFobject=\count399
+\everyMPtoPDFconversion=\toks54
 )
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1018,7 +1104,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 39.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1048,15 +1134,15 @@ Dictionary: translator-numbers-dictionary, Language: English
 heorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (main.nav)
-<ucologo.png, id=46, 279.9258pt x 146.949pt>
+<ucologo.png, id=58, 279.9258pt x 146.949pt>
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 39.
+Package pdftex.def Info: ucologo.png  used on input line 41.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [1
 
@@ -1064,7 +1150,7 @@ Package pdftex.def Info: ucologo.png  used on input line 39.
 g>]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 55.
+Package pdftex.def Info: ucologo.png  used on input line 57.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [2
 
@@ -1074,45 +1160,60 @@ LaTeX Info: Redefining \% on input line 1.
 )
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 59.
+Package pdftex.def Info: ucologo.png  used on input line 61.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [3
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 65.
+Package pdftex.def Info: ucologo.png  used on input line 79.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [4
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 71.
+Package pdftex.def Info: ucologo.png  used on input line 94.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
 
 [5
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 102.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [6
 
- (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 108.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [7
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118
+.
+
+(C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118
+.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-81.
+118.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 81.
+ut line 118.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathk
 erncmss.fd
@@ -1121,65 +1222,162 @@ thkerncmss.
 )
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 81.
-(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
- [6
-
-]
-File: ucologo.png Graphic file (type png)
-<use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 98.
-(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
- [7
-
-]
-File: ucologo.png Graphic file (type png)
-<use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 116.
+Package pdftex.def Info: ucologo.png  used on input line 118.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [8
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 136.
+Package pdftex.def Info: ucologo.png  used on input line 135.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [9
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 142.
+Package pdftex.def Info: ucologo.png  used on input line 153.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [10
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 164.
+Package pdftex.def Info: ucologo.png  used on input line 173.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [11
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 173.
+Package pdftex.def Info: ucologo.png  used on input line 197.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [12
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 179.
+Package pdftex.def Info: ucologo.png  used on input line 223.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [13
 
 ]
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 187.
+Package pdftex.def Info: ucologo.png  used on input line 247.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
  [14
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 300.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [15
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 350.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [16
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 395.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [17
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 432.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [18
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 451.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [19
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 461.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [20
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 483.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+
+[21
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 492.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [22
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 496.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [23
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 508.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [24
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 520.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [25
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 530.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [26
+
+]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 543.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [27
+
+{C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super
+-ts1.enc}]
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 549.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+ [28
+
+]
+Overfull \hbox (23.819pt too wide) in paragraph at lines 559--559
+[]$[]$[]\OT1/cmss/m/n/10.95 .  
+ []
+
+File: ucologo.png Graphic file (type png)
+<use ucologo.png>
+Package pdftex.def Info: ucologo.png  used on input line 559.
+(pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
+[29
 
 ]
 \tf@nav=\write6
@@ -1199,24 +1397,17 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: B3BA078D2BD353AE8D589FB081492393;842
-(rerunfilecheck)             After:  7C4C4B3B9641F22A8FB8EAECDEB3B4A7;1292.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 7C4C4B3B9641F22A8FB8EAECDEB3B4A7;1292.
  ) 
 Here is how much of TeX's memory you used:
- 25684 strings out of 467871
- 499186 string characters out of 5418376
- 891662 words of memory out of 5000000
- 53990 multiletter control sequences out of 15000+600000
- 641384 words of font info for 85 fonts, out of 8000000 for 9000
+ 29206 strings out of 467871
+ 582873 string characters out of 5418376
+ 971664 words of memory out of 5000000
+ 57432 multiletter control sequences out of 15000+600000
+ 641729 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,408b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,438b,1003s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -1232,10 +1423,11 @@ mssi10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/alexb/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (14 pages, 230919 bytes).
+TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/alexb/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/cm-super/sfss1095.pfb>
+Output written on main.pdf (29 pages, 283469 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 280 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 340 words of extra memory for PDF output out of 10000 (max. 10000000)
 

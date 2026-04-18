@@ -75,31 +75,32 @@
     \begin{frame}{Fundamento matemático}
         Para comprender el algoritmo de Dijkstra desde una perspectiva rigurosa, es necesario establecer los fundamentos que garantizan su correctitud. Esta sección presenta las definiciones formales y las propiedades estructurales en las que se basa el algoritmo.
         
-        \begin{definition}[Grafo ponderado]
+        \begin{block}{Definición (Grafo ponderado)}
         Un grafo ponderado es un par $(G, w)$, donde $G=(V,E)$ es un grafo y $w:E\rightarrow\mathbb{R}^{+}$ es una función que asigna pesos positivos a las aristas del grafo.
-        \end{definition}
+        \end{block}
     \end{frame}
 
     \begin{frame}{Fundamento matemático: Camino y Distancia}
-        \begin{definition}[Camino y su peso]
+        \begin{block}{Definición (Camino y su peso)}
         Dado un grafo ponderado $(G, w)$ y un camino $C:v_{0}v_{1}\dots v_{k}$, se define el peso del camino $C$ como la suma de los pesos de las aristas que lo componen:
         \[
         w(C)=\sum_{i=1}^{k}w(v_{i-1},v_{i})
         \]
-        \end{definition}
+        \end{block}
         
-        \begin{definition}[Distancia entre vértices]
+        \begin{block}{Definición (Distancia entre vértices)}
         Para dos vértices distintos $u, v \in V$, la distancia $d_{G}(u,v)$ es:
         \[
         d_{G}(u,v)=\min\{w(C) \mid C \text{ es un } u\text{-}v \text{ camino}\}
         \]
         Si no hay camino, $d_{G}(u,v)=+\infty$.
-        \end{definition}
+        \end{block}
     \end{frame}
 
     \begin{frame}{Principio de optimalidad y Relajación}
         \textbf{Principio de optimalidad de Bellman}\\
         Si un camino es mínimo, cualquier subcamino contenido en él también es un camino mínimo entre sus propios extremos.
+
         \begin{proof}
         Si existiera un subcamino más corto, el peso total del camino original podría reducirse, lo que contradice que era el mínimo.
         \end{proof}

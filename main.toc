@@ -4,6 +4,6 @@
 \beamer@sectionintoc {3}{Fundamento matemático}{6}{0}{3}
 \beamer@sectionintoc {4}{Ejemplo: Desarrollo paso a paso}{10}{0}{4}
 \beamer@sectionintoc {5}{Explicación del pseudocódigo}{11}{0}{5}
-\beamer@sectionintoc {6}{Simulación del algoritmo}{12}{0}{6}
-\beamer@sectionintoc {7}{Conclusiones}{13}{0}{7}
-\beamer@sectionintoc {8}{Bibliografía y webgrafía}{14}{0}{8}
+\beamer@sectionintoc {6}{Simulación del algoritmo}{17}{0}{6}
+\beamer@sectionintoc {7}{Conclusiones}{18}{0}{7}
+\beamer@sectionintoc {8}{Bibliografía y webgrafía}{19}{0}{8}

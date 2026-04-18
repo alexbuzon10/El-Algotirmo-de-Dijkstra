@@ -163,6 +163,58 @@
         }
     \end{frame}
     
+        \begin{frame}{Explicación del pseudocódigo}
+        El algoritmo de Dijkstra calcula la ruta más corta desde un nodo inicial hacia todos los demás nodos del grafo. Requiere que todas las distancias sean positivas o cero. Su idea principal es seleccionar siempre el nodo no visitado más cercano al origen y actualizar las distancias de sus nodos vecinos si encuentra un camino más corto pasando por él.
+    \end{frame}
+
+    \begin{frame}{Explicación del pseudocódigo: línea por línea I}
+        \begin{itemize}
+            \item \texttt{dist[source] = 0}: La distancia para ir del punto de inicio a sí mismo es cero.
+            
+            \item \texttt{for each vertex v in Graph}: Recorre todos los demás puntos o nodos de la red.
+            
+            \item \texttt{dist[v] = infinity}: Como al principio el algoritmo no sabe cómo llegar al resto de nodos, les asigna temporalmente una distancia infinita.
+            
+            \item \texttt{add v to Q}: Introduce todos los nodos en un conjunto llamado \texttt{Q}, que funciona como una lista de tareas de nodos no visitados.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Explicación del pseudocódigo: línea por línea II}
+        \begin{itemize}
+            \item \texttt{while Q is not empty}: El proceso se repite en bucle hasta que la lista de nodos no visitados quede vacía.
+            
+            \item \texttt{u = vertex in Q with min dist[u]}: Selecciona de la lista el nodo que tenga la menor distancia acumulada. En la primera iteración, este será necesariamente el nodo origen.
+            
+            \item \texttt{remove u from Q}: Elimina ese nodo de la lista para marcarlo oficialmente como visitado.
+            
+            \item \texttt{for each neighbor v of u in Q}: Revisa únicamente los nodos vecinos de \texttt{u} que todavía no hayan sido visitados.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Explicación del pseudocódigo: línea por línea III}
+        \begin{itemize}
+            \item \texttt{alt = dist[u] + length(u, v)}: Calcula la longitud de una posible nueva ruta hasta \texttt{v}, sumando la distancia ya conocida hasta \texttt{u} más el peso de la arista entre \texttt{u} y \texttt{v}.
+            
+            \item \texttt{if alt < dist[v]}: Este es el núcleo del algoritmo. Comprueba si la nueva distancia calculada es menor que la mejor distancia conocida hasta ese momento para llegar a \texttt{v}.
+            
+            \item \texttt{dist[v] = alt} y \texttt{prev[v] = u}: Si la nueva ruta es mejor, se actualiza la distancia mínima registrada y se guarda que el nodo anterior óptimo para llegar a \texttt{v} es \texttt{u}.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Resultado final del algoritmo}
+        \begin{itemize}
+            \item \texttt{return dist, prev}: El algoritmo finaliza devolviendo dos estructuras:
+            \begin{itemize}
+                \item \texttt{dist}, que contiene la distancia mínima desde el nodo origen hasta cada nodo del grafo.
+                \item \texttt{prev}, que permite reconstruir el camino más corto seguido para llegar a cada nodo.
+            \end{itemize}
+        \end{itemize}
+        
+        \vspace{0.3cm}
+        Gracias a estas dos estructuras, no solo se conoce cuánto cuesta llegar a cada punto, sino también cuál es la ruta exacta que debe seguirse.
+    \end{frame}
+
+
     \section{Simulación del algoritmo}
 
     \begin{frame}{Simulación del algoritmo}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.12)  18 APR 2026 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.12)  18 APR 2026 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1152,39 +1152,39 @@ LaTeX Info: Redefining \% on input line 83.
  [7
 
 ]
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 89.
+Package pdftex.def Info: ucologo.png  used on input line 91.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
  [8
 
 ]
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
 
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
 
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-95.
+97.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 95.
+ut line 97.
 
 (C:\Users\alexb\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathk
 erncmss.fd
@@ -1193,32 +1193,32 @@ thkerncmss.
 )
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 95.
+Package pdftex.def Info: ucologo.png  used on input line 97.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
  [9
 
 ]
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 103.
+Package pdftex.def Info: ucologo.png  used on input line 105.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
  [10
 
 ]
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
 File: ucologo.png Graphic file (type png)
 <use ucologo.png>
-Package pdftex.def Info: ucologo.png  used on input line 111.
+Package pdftex.def Info: ucologo.png  used on input line 113.
 (pdftex.def)             Requested size: 54.19875pt x 28.45274pt.
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
  [11
 
 ]
@@ -1256,7 +1256,7 @@ fonts/cm/cmss12.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmss8.pfb><C:/Users/alexb/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexb/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (11 pages, 118347 bytes).
+Output written on main.pdf (11 pages, 118520 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)

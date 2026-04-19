@@ -104,7 +104,42 @@
     \section{Descripción del algoritmo}
 
     \begin{frame}{Descripción del algoritmo}
+        El algorimo de Dijkstra es un algorimo basado en la teoría de grafos. Un grafo, en informática es  es simplemente una estructura visual que representa las relaciones entre distintos elementos y está formada por dos piezas clave: 
+        \begin{itemize}
+            \item \textbf{vértices (o nodos)}.
+            \item \textbf{Aristas}
+        \end{itemize}
+        Existen un tipo de grado denominado \textbf{grafo ponderado} donde , a cada arista se le asigna un valor numérico llamado \textbf{"peso"} (o coste), que indica la importancia o peso que tiene la misma.
+    \end{frame}
 
+    \begin{frame}{Descripción del algoritmo}
+        Sobre este tipo de redes, uno de los mayores desafíos es encontrar el camino de
+        longitud mínima entre dos ubicaciones, un proceso vital en aplicaciones cotidianas
+        como la logística de transporte o los sistemas GPS. La solución más eficiente a este
+        problema la aportó Edsger Dijkstra en 1956.
+
+        \vspace{0.25cm}
+
+        Su algoritmo opera bajo la condición de que todos los pesos de la red sean positivos y
+        utiliza una estrategia progresiva de "pasos seguros" para explorar las rutas desde un
+        origen:
+    \end{frame}
+
+    \begin{frame}{Descripción del algoritmo}
+        \begin{enumerate}
+            \item \textbf{Inicialización}: Comienza en el punto de partida asumiendo que la distancia al
+            resto de vértices es "infinita", ya que aún no ha explorado el terreno.
+            \item \textbf{Elección}: En cada iteración, selecciona el nodo no visitado que presenta el
+            menor coste acumulado.
+            \item \textbf{Relajación}: Desde esa posición, evalúa a sus vecinos directos. Si descubre un
+            atajo que mejora el trayecto conocido hasta ese momento, actualiza su registro
+            con el nuevo valor mínimo.
+            \item \textbf{Cierre}: Tras comprobar todas sus conexiones, el lugar actual se marca como
+            definitivo para no volver a analizarlo.
+        \end{enumerate}
+
+        Al repetir este ciclo de manera estructurada hasta examinar todos los elementos
+        disponibles, el método garantiza matemáticamente la obtención de la ruta óptima.
     \end{frame}
 
     \section{Fundamento matemático}
@@ -481,15 +516,6 @@
             \qquad return dist, prev
         }
     \end{frame}
-    
-    \section{Simulación del algoritmo}
-
-    \begin{frame}{Simulación del algoritmo}
-        En el siguiente enlace encontrarás una simulación \textbf{desarrollada por nosotros} del algoritmo programa en \texttt{react.js}: 
-        \color{blue}\\ 
-        \begin{center}\underline{\url{https://djkistra.vercel.app/}}\color{black}\end{center} 
-        \color{black}
-    \end{frame}
 
     \begin{frame}{Explicación del pseudocódigo}
         El algoritmo de Dijkstra calcula la ruta más corta desde un nodo inicial hacia todos los demás nodos del grafo. Requiere que todas las distancias sean positivas o cero. Su idea principal es seleccionar siempre el nodo no visitado más cercano al origen y actualizar las distancias de sus nodos vecinos si encuentra un camino más corto pasando por él.
@@ -542,6 +568,15 @@
         Gracias a estas dos estructuras, no solo se conoce cuánto cuesta llegar a cada punto, sino también cuál es la ruta exacta que debe seguirse.
     \end{frame}
 
+    \section{Simulación del algoritmo}
+
+    \begin{frame}{Simulación del algoritmo}
+        En el siguiente enlace encontrarás una simulación \textbf{desarrollada por nosotros} del algoritmo programa en \texttt{react.js}: 
+        \color{blue}\\ 
+        \begin{center}\underline{\href{https://djkistra.vercel.app/}{Pulsa este enlace para acceder a la simulación}}\color{black}\end{center} 
+        \color{black}
+    \end{frame}
+
     \section{Conclusiones}
 
     \begin{frame}{Conclusiones}
@@ -552,9 +587,9 @@
 
     \begin{frame}{Bibliografía y webgrafía}
         \begin{itemize}
-            \item \textbf{Sitio web (Artículo de blog)}: Byte, L. (2024, 24 de octubre). El Algoritmo de Dijkstra: Qué es, Cómo Funciona y Dónde se utiliza. CodigoNautas. \color{blue}\underline{\url{https://codigonautas.com/algoritmo-dijkstra-que-es-ejemplo/}}\color{black}.
+            \item \textbf{Sitio web (Artículo de blog)}: Byte, L. (2024, 24 de octubre). El Algoritmo de Dijkstra: Qué es, Cómo Funciona y Dónde se utiliza. CodigoNautas. \color{blue}\underline{\href{https://codigonautas.com/algoritmo-dijkstra-que-es-ejemplo/}{https://codigonautas.com}}\color{black}.
 
-            \item \textbf{Video de YouTube}: Gomez, J. A. (2012, 6 de agosto). Algoritmo de Dijkstra (1) - Teoría de Grafos [Video]. YouTube. \color{blue}\underline{\url{https://www.youtube.com/watch?v=fgdCNuGPJnw}}\color{black}.
+            \item \textbf{Video de YouTube}: Gomez, J. A. (2012, 6 de agosto). Algoritmo de Dijkstra (1) - Teoría de Grafos [Video]. YouTube. \color{blue}\underline{\href{https://www.youtube.com/watch?v=fgdCNuGPJnw}{https://www.youtube.com}}\color{black}.
         \end{itemize}
     \end{frame}
 \end{document}

@@ -48,28 +48,20 @@
 
 % --- INTEGRANTES ---
 \begin{frame}{Integrantes del grupo}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item Alijo Fernández, Miguel Ángel
-                \item Buzón García, Alejandro
-                \item Casado Caballero, Antonio
-                \item Collantes Aguilar, Pablo
-                \item Deogracias Moya, Juan
-                \item Guerrero Romero, Jose Francisco
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item Laredo Gutiérrez, José Raúl
-                \item López Reyes, Marcos
-                \item Aramyan, David Ángel
-                \item Costa Ruiz-Canela, Javier Jesús
-                \item Ligero González, Alejandro
-            \end{itemize}
-        \end{column}
-    \end{columns}
-\end{frame}
+        \begin{center}
+            Alijo Fernández, Miguel Ángel \\
+            Aramyan, David Ángel \\
+            Buzón García, Alejandro \\
+            Casado Caballero, Antonio \\
+            Collantes Aguilar, Pablo \\
+            Costa Ruiz-Canela, Javier Jesús \\
+            Deogracias Moya, Juan \\
+            Guerrero Romero, Jose Francisco \\
+            Laredo Gutiérrez, José Raúl \\
+            Ligero González, Alejandro \\
+            López Reyes, Marcos 
+        \end{center}
+    \end{frame}
 
 % --- ÍNDICE ---
 \begin{frame}{Tabla de contenidos}
@@ -314,6 +306,52 @@ Devolver dist, prev
 \end{verbatim}
 \end{small}
 \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Explicación del pseudocódigo}
+    El algoritmo calcula la ruta más corta desde un origen hacia todos los demás nodos. Requiere que las distancias sean positivas. 
+    \vspace{0.4cm}
+    \textbf{Idea principal:} Seleccionar siempre el nodo no visitado más cercano al origen y actualizar las distancias de sus vecinos si se halla un camino más corto.
+\end{frame}
+
+\begin{frame}{Explicación: Línea por línea I}
+    \begin{itemize}
+        \item \texttt{dist[source] = 0}: La distancia del punto de inicio a sí mismo es cero.
+        \item \texttt{for each vertex v in Graph}: Recorre todos los nodos de la red para su configuración inicial.
+        \item \texttt{dist[v] = infinity}: Al inicio, el algoritmo desconoce cómo llegar al resto de nodos, por lo que les asigna una distancia infinita.
+        \item \texttt{add v to Q}: Introduce todos los nodos en un conjunto \texttt{Q} (lista de tareas pendientes).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Explicación: Línea por línea II}
+    \begin{itemize}
+        \item \texttt{while Q is not empty}: El proceso se repite hasta que no queden nodos por visitar.
+        \item \texttt{u = vertex in Q with min dist[u]}: Selecciona el nodo con la menor distancia acumulada. En la primera iteración, siempre será el origen.
+        \item \texttt{remove u from Q}: Marca el nodo como visitado eliminándolo de la lista de pendientes.
+        \item \texttt{for each neighbor v of u in Q}: Revisa los vecinos de \texttt{u} que aún no han sido finalizados.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Explicación: Línea por línea III}
+    \begin{itemize}
+        \item \texttt{alt = dist[u] + length(u, v)}: Calcula la longitud de una posible nueva ruta sumando la distancia a \texttt{u} más el peso de la arista hasta \texttt{v}.
+        \item \texttt{if alt < dist[v]}: Es el núcleo del algoritmo; comprueba si esta nueva ruta es mejor que la mejor conocida hasta ahora.
+        \item \texttt{dist[v] = alt} y \texttt{prev[v] = u}: Si es mejor, actualiza el registro y guarda a \texttt{u} como el predecesor óptimo.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultado final del algoritmo}
+    \begin{itemize}
+        \item \texttt{return dist, prev}: El algoritmo devuelve:
+        \begin{itemize}
+            \item \texttt{dist}: Distancia mínima del origen a cada punto.
+            \item \texttt{prev}: Estructura para reconstruir la ruta exacta.
+        \end{itemize}
+    \end{itemize}
+    \vspace{0.4cm}
+    \begin{block}{Utilidad}
+        Gracias a esto, no solo sabemos cuánto cuesta llegar, sino qué camino exacto debemos seguir.
+    \end{block}
 \end{frame}
 
 \section{Simulación y Conclusiones}

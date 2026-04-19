@@ -1,0 +1,22 @@
+\frametitle{Pseudocódigo del algoritmo}
+\begin{exampleblock}{Función Dijkstra(Grafo, origen)}
+\begin{small}
+\begin{verbatim}
+dist[origen] = 0
+Para cada vértice v en Grafo:
+    Si v != origen:
+        dist[v] = infinito
+    Añadir v a Q (conjunto no visitados)
+
+Mientras Q no esté vacío:
+    u = vértice en Q con mínima dist[u]
+    Eliminar u de Q
+    Para cada vecino v de u todavía en Q:
+        alt = dist[u] + peso(u, v)
+        Si alt < dist[v]:
+            dist[v] = alt
+            prev[v] = u
+Devolver dist, prev
+\end{verbatim}
+\end{small}
+\end{exampleblock}

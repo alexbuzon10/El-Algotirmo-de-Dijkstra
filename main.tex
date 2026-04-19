@@ -1,10 +1,9 @@
-\documentclass{beamer}
+\documentclass[11pt]{beamer}
+
+% --- PAQUETES ---
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amsfonts, amsthm, amsmath, amssymb}
 \usepackage[b]{esvect}
 \usepackage{enumitem}
 \usepackage{eurosym}
@@ -13,179 +12,183 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx}
 \usepackage{bm}
-\usepackage{blindtext}
 \usepackage{tikz}
+\usepackage{hyperref}
+
+% --- CONFIGURACIÓN DE TEMA ---
+\usetheme{Madrid} 
+\usecolortheme{seagull} 
+\usefonttheme{professionalfonts} 
+\setbeamertemplate{navigation symbols}{} % Quitar iconos de navegación
+
+% --- LIBRERÍAS TIKZ ---
 \usetikzlibrary{positioning, arrows.meta}
+\tikzset{
+    nodo/.style={circle, draw, font=\sffamily\bfseries, minimum size=8mm, inner sep=0pt},
+    visitado/.style={circle, draw, fill=green!30, font=\sffamily\bfseries, minimum size=8mm, inner sep=0pt},
+    flecha/.style={draw, ->, >=Stealth, thick}
+}
 
-% TITLE
-\title{El algoritmo de Dijkstra}
-\author{Grupo 3}
-\date{\today}
-
-\usetheme{Madrid} % tema de presentación
-\usecolortheme{seagull} % tema de color
-\usefonttheme{professionalfonts} % Fuente
-\setbeamertemplate{navigation symbols}{}
-% \useinnertheme{circles} % tema interior
-% \useoutertheme{split} % tema exterior
-
-
-% MATH OPERATORS
+% --- OPERADORES MATEMÁTICOS ---
 \DeclareMathOperator{\mcd}{mcd}
 \DeclareMathOperator{\mcm}{mcm}
 
-\logo{\includegraphics[height=1cm]{ucologo}}
+% --- METADATOS ---
+\title[Algoritmo de Dijkstra]{El algoritmo de Dijkstra}
+\subtitle{Teoría de Grafos y Caminos Mínimos}
+\author[Grupo 3]{Grupo 3}
+\institute[UCO]{Universidad de Córdoba} % Ajustado según el logo mencionado
+\date{\today}
+\logo{\includegraphics[height=0.8cm]{ucologo}}
 
 \begin{document}
 
-    \frame{\titlepage}
+% --- PORTADA ---
+\frame{\titlepage}
 
-    \begin{frame}{Integrantes del grupo}
-        \begin{center}
-            Alijo Fernández, Miguel Ángel \\
-            Buzón García, Alejandro \\
-            Casado Caballero, Antonio \\
-            Collantes Aguilar, Pablo \\
-            Deogracias Moya, Juan \\
-            Guerrero Romero, Jose Francisco \\
-            Laredo Gutiérrez, José Raúl \\
-            López Reyes, Marcos \\
-            Aramyan, David Ángel \\
-            Costa Ruiz-Canela, Javier Jesús \\
-            Ligero González, Alejandro
-        \end{center}
-    \end{frame}
+% --- INTEGRANTES ---
+\begin{frame}{Integrantes del grupo}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Alijo Fernández, Miguel Ángel
+                \item Buzón García, Alejandro
+                \item Casado Caballero, Antonio
+                \item Collantes Aguilar, Pablo
+                \item Deogracias Moya, Juan
+                \item Guerrero Romero, Jose Francisco
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Laredo Gutiérrez, José Raúl
+                \item López Reyes, Marcos
+                \item Aramyan, David Ángel
+                \item Costa Ruiz-Canela, Javier Jesús
+                \item Ligero González, Alejandro
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-    \begin{frame}{Tabla de contenidos}
-        \tableofcontents
-    \end{frame}
+% --- ÍNDICE ---
+\begin{frame}{Tabla de contenidos}
+    \tableofcontents
+\end{frame}
 
-    \section{Introducción}
+\section{Introducción}
 
-    \begin{frame}{Introducción}
-        \begin{block}{Pregunta inicial}
-            Si existen varios caminos para llegar de un punto a otro, ¿cómo podemos determinar cuál es el más eficiente?
-        \end{block}
+\begin{frame}{Introducción}
+    \begin{block}{Pregunta inicial}
+        Si existen varios caminos para llegar de un punto a otro, ¿cómo podemos determinar cuál es el más eficiente?
+    \end{block}
 
-        \begin{itemize}
-            \item En muchos problemas no basta con llegar al destino.
-            \item También interesa minimizar la distancia, el tiempo, el coste o los recursos.
-            \item Este desafío se conoce como el \textbf{problema del camino mínimo}.
-        \end{itemize}
+    \begin{itemize}
+        \item En muchos problemas no basta con llegar al destino.
+        \item También interesa minimizar la distancia, el tiempo, el coste o los recursos.
+        \item Este desafío se conoce como el \textbf{problema del camino mínimo}.
+    \end{itemize}
 
-        \vspace{0.2cm}
+    \vspace{0.4cm}
+    El algoritmo de Dijkstra permite abordar este problema en grafos ponderados con pesos no negativos.
+\end{frame}
 
-        El algoritmo de Dijkstra permite abordar este problema en grafos ponderados con pesos no negativos.
-    \end{frame}
+\begin{frame}{Motivación del problema}
+    El problema del camino mínimo aparece en multitud de situaciones reales:
 
-    \begin{frame}{Motivación del problema}
-        El problema del camino mínimo aparece en multitud de situaciones reales:
+    \begin{itemize}
+        \item \textbf{Sistemas GPS:} para calcular rutas eficientes.
+        \item \textbf{Redes informáticas:} para enviar datos por los canales adecuados.
+        \item \textbf{Logística y transporte:} para reducir costes y tiempos de entrega.
+        \item \textbf{Planificación urbana:} para trazar recorridos en mapas o redes.
+    \end{itemize}
 
-        \begin{itemize}
-            \item \textbf{Sistemas GPS:} para calcular rutas eficientes.
-            \item \textbf{Redes informáticas:} para enviar datos por los canales adecuados.
-            \item \textbf{Logística y transporte:} para reducir costes y tiempos de entrega.
-            \item \textbf{Planificación urbana:} para trazar recorridos en mapas o redes.
-        \end{itemize}
+    \vspace{0.4cm}
+    Por ello, su estudio es fundamental tanto en la Matemática Discreta como en la Informática.
+\end{frame}
 
-        \vspace{0.2cm}
+\section{Descripción del algoritmo}
 
-        Por ello, su estudio es fundamental tanto en la Matemática Discreta como en la Informática.
-    \end{frame}
+\begin{frame}{Descripción del algoritmo}
+    El algoritmo de Dijkstra es un método basado en la teoría de grafos. Un grafo representa las relaciones entre elementos mediante:
+    
+    \begin{itemize}
+        \item \textbf{Vértices (o nodos):} los puntos de conexión.
+        \item \textbf{Aristas:} las uniones entre nodos.
+    \end{itemize}
 
-    \begin{frame}{Objetivo del trabajo}
-        En este trabajo analizaremos el algoritmo de Dijkstra como la técnica principal para resolver el problema del camino mínimo.
+    \begin{block}{Grafo ponderado}
+        Es aquel donde a cada arista se le asigna un valor numérico llamado \textbf{"peso"} (o coste), que indica la importancia o el coste de transitarla.
+    \end{block}
+\end{frame}
 
-        \vspace{0.4cm}
+\begin{frame}{Historia y Estrategia}
+    La solución más eficiente a este problema la aportó \textbf{Edsger Dijkstra en 1956}. 
+    
+    \vspace{0.3cm}
+    Su algoritmo opera bajo la condición de que todos los pesos de la red sean positivos y utiliza una estrategia de \textbf{"pasos seguros"}:
 
-        Comprender su funcionamiento nos permitirá dominar una de las herramientas más potentes y aplicadas de la teoría de grafos.
-    \end{frame}
+    \begin{enumerate}
+        \item \textbf{Inicialización}: Distancia origen = 0, resto = $\infty$.
+        \item \textbf{Elección}: Selecciona el nodo no visitado con menor coste acumulado.
+        \item \textbf{Relajación}: Evalúa si pasar por el nodo actual acorta la distancia a sus vecinos.
+        \item \textbf{Cierre}: Marca el nodo como definitivo.
+    \end{enumerate}
+\end{frame}
 
-    \section{Descripción del algoritmo}
+\section{Fundamento matemático}
 
-    \begin{frame}{Descripción del algoritmo}
+\begin{frame}{Fundamento matemático}
+    \begin{block}{Definición (Grafo ponderado)}
+        Un grafo ponderado es un par $(G, w)$, donde $G=(V,E)$ es un grafo y $w:E\rightarrow\mathbb{R}^{+}$ es una función de peso.
+    \end{block}
+    
+    \begin{block}{Peso de un camino $C$}
+        Para un camino $C: v_{0}v_{1}\dots v_{k}$, el peso es:
+        \[ w(C)=\sum_{i=1}^{k}w(v_{i-1},v_{i}) \]
+    \end{block}
+    
+    \begin{block}{Distancia entre vértices}
+        \[ d_{G}(u,v)=\min\{w(C) \mid C \text{ es un } u\text{-}v \text{ camino}\} \]
+        Si no existe camino, $d_{G}(u,v)=+\infty$.
+    \end{block}
+\end{frame}
 
-    \end{frame}
+\begin{frame}{Principio de optimalidad y Relajación}
+    \textbf{Principio de optimalidad de Bellman}\\
+    Cualquier subcamino de un camino mínimo es también un camino mínimo.
 
-    \section{Fundamento matemático}
+    \vspace{0.4cm}
+    \textbf{Operación de relajación}\\
+    Para cada arista $(u, v) \in E$:
+    \begin{exampleblock}{Actualización de distancia}
+        \[ \text{si } d[u] + w(u,v) < d[v] \implies d[v] \gets d[u] + w(u,v) \]
+    \end{exampleblock}
+\end{frame}
 
-    \begin{frame}{Fundamento matemático}
-        Para comprender el algoritmo de Dijkstra desde una perspectiva rigurosa, es necesario establecer los fundamentos que garantizan su correctitud. Esta sección presenta las definiciones formales y las propiedades estructurales en las que se basa el algoritmo.
-        
-        \begin{block}{Definición (Grafo ponderado)}
-        Un grafo ponderado es un par $(G, w)$, donde $G=(V,E)$ es un grafo y $w:E\rightarrow\mathbb{R}^{+}$ es una función que asigna pesos positivos a las aristas del grafo.
-        \end{block}
-    \end{frame}
-
-    \begin{frame}{Fundamento matemático: Camino y Distancia}
-        \begin{block}{Definición (Camino y su peso)}
-        Dado un grafo ponderado $(G, w)$ y un camino $C:v_{0}v_{1}\dots v_{k}$, se define el peso del camino $C$ como la suma de los pesos de las aristas que lo componen:
-        \[
-        w(C)=\sum_{i=1}^{k}w(v_{i-1},v_{i})
-        \]
-        \end{block}
-        
-        \begin{block}{Definición (Distancia entre vértices)}
-        Para dos vértices distintos $u, v \in V$, la distancia $d_{G}(u,v)$ es:
-        \[
-        d_{G}(u,v)=\min\{w(C) \mid C \text{ es un } u\text{-}v \text{ camino}\}
-        \]
-        Si no hay camino, $d_{G}(u,v)=+\infty$.
-        \end{block}
-    \end{frame}
-
-    \begin{frame}{Principio de optimalidad y Relajación}
-        \textbf{Principio de optimalidad de Bellman}\\
-        Si un camino es mínimo, cualquier subcamino contenido en él también es un camino mínimo entre sus propios extremos.
-
-        \begin{proof}
-        Si existiera un subcamino más corto, el peso total del camino original podría reducirse, lo que contradice que era el mínimo.
-        \end{proof}
-        
-        \vspace{0.3cm}
-        \textbf{Operación de relajación}\\
-        El algoritmo mantiene para cada vértice $v$ una estimación de su distancia mínima $d[v]$ desde la fuente $s$ (inicialmente $d[s] = 0$ y $d[v] = +\infty$ para el resto).
-        
-        Para cada arista $(u, v) \in E$:
-        \[
-        \text{si } d[u] + w(u,v) < d[v] \implies d[v] \gets d[u] + w(u,v)
-        \]
-    \end{frame}
-
-    \begin{frame}{Condiciones y Complejidad}
-        \textbf{Condición de pesos no negativos}\\
-        Requiere que la función de peso sea $w:E\rightarrow\mathbb{R}^{+}$. Pesos negativos invalidarían la estrategia \textit{greedy}, ya que una distancia "finalizada" podría reducirse posteriormente por un arco negativo.
-        
-        \vspace{0.3cm}
-        \textbf{Complejidad computacional}
-        \begin{table}[h]
+\begin{frame}{Complejidad computacional}
+    El algoritmo requiere pesos no negativos ($w:E\rightarrow\mathbb{R}^{+}$).
+    
+    \begin{table}
         \centering
-        \begin{tabular}{|l|c|}
-        \hline
-        \textbf{Estructura de datos} & \textbf{Complejidad temporal} \\
-        \hline
-        Lista o Arreglo simple & $O(|V|^2)$ \\
-        Heap binario & $O((|V| + |E|) \log |V|)$ \\
-        Heap de Fibonacci & $O(|E| + |V| \log |V|)$ \\
-        \hline
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{lc}
+            \hline
+            \textbf{Estructura de datos} & \textbf{Complejidad temporal} \\ \hline
+            Lista o Arreglo simple       & $O(|V|^2)$ \\
+            Heap binario                 & $O((|V| + |E|) \log |V|)$ \\
+            Heap de Fibonacci            & $O(|E| + |V| \log |V|)$ \\ \hline
         \end{tabular}
-        \end{table}
-    \end{frame}
+        \caption{Eficiencia según la implementación}
+    \end{table}
+\end{frame}
 
-    \section{Ejemplo: Desarrollo paso a paso}
+\section{Ejemplo paso a paso}
 
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        Como ejemplo del algoritmo proponemos el siguiente: 
-
-        \vspace{0.25cm}
-
-        \begin{enumerate}
-            \item Definimos del grafo
-
-            \vspace{0.25cm}
-
-            Definimos los nodos y sus conexiones (aristas) con los siguientes pesos: 
-
+\begin{frame}{Ejemplo: Definición del grafo}
+    Definimos los nodos y sus conexiones:
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
             \begin{itemize}
                 \item $(A, B) \rightarrow 5$
                 \item $(A, C) \rightarrow 2$
@@ -193,368 +196,153 @@
                 \item $(C, B) \rightarrow 2$
                 \item $(C, D) \rightarrow 7$
             \end{itemize}
-        \end{enumerate}
-    \end{frame}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \node[nodo] (A) at (0,0) {A};
+                \node[nodo] (B) at (2.5,0) {B};
+                \node[nodo] (C) at (0,-2) {C};
+                \node[nodo] (D) at (2.5,-2) {D};
 
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        El grafo resultante nos quedaría algo así: 
+                \path[flecha] (A) edge node[above] {5} (B);
+                \path[flecha] (A) edge node[left]  {2} (C);
+                \path[flecha] (B) edge node[right] {1} (D);
+                \path[flecha] (C) edge node[below] {2} (B);
+                \path[flecha] (C) edge node[below] {7} (D);
+            \end{tikzpicture}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-        \begin{center}
-        \begin{tikzpicture}[
-            >=Stealth,
-            node/.style={circle, draw, minimum size=8mm, inner sep=0pt},
-            every edge/.style={draw, ->, thick}
-        ]
-            % Nodos
-            \node[node] (A) at (0,0) {A};
-            \node[node] (B) at (3,0) {B};
-            \node[node] (C) at (0,-2) {C};
-            \node[node] (D) at (3,-2) {D};
+\begin{frame}{Ejemplo: Desarrollo (I)}
+    \textbf{Paso 1: Seleccionamos Nodo A (Origen)}
+    \begin{itemize}
+        \item Distancias iniciales: $A=0$, resto $\infty$.
+        \item Vecinos de $A$: $B$ y $C$.
+        \item $B: 0+5=5 < \infty$ (Actualizamos).
+        \item $C: 0+2=2 < \infty$ (Actualizamos).
+    \end{itemize}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        \node[visitado] (A) at (0,0) {A};
+        \node[nodo] (B) at (2.5,0) {B};
+        \node[nodo] (C) at (0,-2) {C};
+        \node[nodo] (D) at (2.5,-2) {D};
+        \path[flecha] (A) edge node[above] {5} (B) (A) edge node[left] {2} (C) (B) edge node[right] {1} (D) (C) edge node[below] {2} (B) (C) edge node[below] {7} (D);
+    \end{tikzpicture}
+\end{frame}
 
-            % Aristas
-            \path
-                (A) edge node[above] {5} (B)
-                (A) edge node[left]  {2} (C)
-                (B) edge node[right] {1} (D)
-                (C) edge node[below] {2} (B)
-                (C) edge node[below] {7} (D);
-        \end{tikzpicture}
-        \end{center}
-    \end{frame}
+\begin{frame}{Ejemplo: Desarrollo (II)}
+    \textbf{Paso 2: Seleccionamos Nodo C (Distancia 2)}
+    \begin{itemize}
+        \item Elegimos $C$ porque $2 < 5$ ($B$).
+        \item Vecinos de $C$: $B$ y $D$.
+        \item $B: 2+2=4$. Como $4 < 5$, \textbf{actualizamos B}.
+        \item $D: 2+7=9 < \infty$ (Actualizamos).
+    \end{itemize}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        \node[visitado] (A) at (0,0) {A};
+        \node[nodo] (B) at (2.5,0) {B};
+        \node[visitado] (C) at (0,-2) {C};
+        \node[nodo] (D) at (2.5,-2) {D};
+        \path[flecha] (A) edge node[above] {5} (B) (A) edge node[left] {2} (C) (B) edge node[right] {1} (D) (C) edge node[below] {2} (B) (C) edge node[below] {7} (D);
+    \end{tikzpicture}
+\end{frame}
 
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        \begin{enumerate}
-            \item Desarrollo del algoritmo (Paso a Paso)
-
-            \vspace{0.25cm}
-
-            \textbf{Estado inicial}:
-            
-            \vspace{0.25cm}
-
-            \begin{itemize}
-                \item Distancias: $A = 0, B = \infty, C = \infty, D = \infty$.
-
-                \vspace{0.25cm}
-
-                $A$ será nuestro nodo inicial (por eso su distancia será 0), $B$, $C$, $D$ no sabemos dónde estarán, los ponemos a distancia infinita para cubrir hasta distancias muy grandes.
-
-                \vspace{0.25cm}
-
-                \item Nodos no visitados: $\{A, B, C, D\}$.
-            \end{itemize}
-        \end{enumerate}
-    \end{frame}
-
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        \begin{enumerate}
-            \item[2.] Desarrollo del algoritmo (Paso a Paso)
-
-            \vspace{0.25cm}
-
-            \textbf{Paso 1: Seleccionamos Nodo A}:
-            
-            \vspace{0.25cm}
-
-            \begin{itemize}
-                \item Observamos los nodos vecinos de $A$: $B$ y $C$.
-
-                \vspace{0.25cm}
-
-                \item Para $B$: $0 + 5 = 5$. (Es menor que $\infty$ actualizamos).
-
-                \vspace{0.25cm}
-
-                \item Para $C$: $0 + 5 = 5$. (Es menor que $\infty$ actualizamos).
-
-                \vspace{0.25cm}
-
-                \item Para $C$: $0 + 2 = 2$. (Es menor que $\infty$ actualizamos).
-
-                \vspace{0.25cm}
-
-                \item Marcamos $A$ como visitado.
-            \end{itemize}
-            \begin{center}
-        \begin{tikzpicture}[
-            >=Stealth,
-            node/.style={circle, draw, minimum size=8mm, inner sep=0pt},
-            every edge/.style={draw, ->, thick}
-        ]
-            % Nodos
-            \node[node, fill=green] (A) at (0,0) {A};
-            \node[node] (B) at (3,0) {B};
-            \node[node] (C) at (0,-2) {C};
-            \node[node] (D) at (3,-2) {D};
-
-            % Aristas
-            \path
-                (A) edge node[above] {5} (B)
-                (A) edge node[left]  {2} (C)
-                (B) edge node[right] {1} (D)
-                (C) edge node[below] {2} (B)
-                (C) edge node[below] {7} (D);
-        \end{tikzpicture}
-        \end{center}
-        \end{enumerate}
-    \end{frame}
-
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        
-            \vspace{0.25cm}
-
-            \textbf{Paso 2: Seleccionamos Nodo C (Distancia 2)}:
-            
-            \vspace{0.25cm}
-
-            \begin{itemize}
-                \item Elegimos $C$ porque su distancia ($2$) es menor que la de $B$ ($5$).
-
-                \vspace{0.25cm}
-
-                \item Miramos vecinos de $C$: $B$ y $D$.
-
-                \vspace{0.25cm}
-
-                \item Para $B$: $2 + 2 = 4$. (Como $4 < 5$, actualizamos $B$).
-
-                \vspace{0.25cm}
-
-                \item Para $D$: $2 + 7 = $9. (Es menor que $\infty$, actualizamos $D$).
-
-                \vspace{0.25cm}
-
-                \item Marcamos $C$ como visitado.
-            \end{itemize}
-            \begin{center}
-        \begin{tikzpicture}[
-            >=Stealth,
-            node/.style={circle, draw, minimum size=8mm, inner sep=0pt},
-            every edge/.style={draw, ->, thick}
-        ]
-            % Nodos
-            \node[node, fill=green] (A) at (0,0) {A};
-            \node[node] (B) at (3,0) {B};
-            \node[node, fill=green] (C) at (0,-2) {C};
-            \node[node] (D) at (3,-2) {D};
-
-            % Aristas
-            \path
-                (A) edge node[above] {5} (B)
-                (A) edge node[left]  {2} (C)
-                (B) edge node[right] {1} (D)
-                (C) edge node[below] {2} (B)
-                (C) edge node[below] {7} (D);
-        \end{tikzpicture}
-        \end{center}
-    \end{frame}
-
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-            \vspace{0.25cm}
-
-            \textbf{Paso 3: Seleccionamos Nodo B (Distancia 4)}:
-            
-            \vspace{0.25cm}
-
-            \begin{itemize}
-                \item $B$ ahora tiene distancia $4$ gracias a la actualización anterior.
-
-                \vspace{0.25cm}
-
-                \item Miramos al vecino de $B$: $D$.
-
-                \vspace{0.25cm}
-
-                \item Para $D$: $4 + 1 = 5$. (Como $5 < 9$, actualizamos $D$).
-
-                \vspace{0.25cm}
-
-                \item Marcamos $B$ como visitado.
-            \end{itemize}
-            \begin{center}
-        \begin{tikzpicture}[
-            >=Stealth,
-            node/.style={circle, draw, minimum size=8mm, inner sep=0pt},
-            every edge/.style={draw, ->, thick}
-        ]
-            % Nodos
-            \node[node, fill=green] (A) at (0,0) {A};
-            \node[node, fill=green] (B) at (3,0) {B};
-            \node[node, fill=green] (C) at (0,-2) {C};
-            \node[node] (D) at (3,-2) {D};
-
-            % Aristas
-            \path
-                (A) edge node[above] {5} (B)
-                (A) edge node[left]  {2} (C)
-                (B) edge node[right] {1} (D)
-                (C) edge node[below] {2} (B)
-                (C) edge node[below] {7} (D);
-        \end{tikzpicture}
-        \end{center}
-    \end{frame}
-
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-            \vspace{0.25cm}
-
-            \textbf{Paso 4: Seleccionamos Nodo D (Distancia 5)}:
-            
-            \vspace{0.25cm}
-
-            \begin{itemize}
-                \item No tiene vecinos que no hayamos visitado.
-
-                \vspace{0.25cm}
-
-                \item Marcamos $D$ como visitado.
-            \end{itemize}
-            \begin{center}
-        \begin{tikzpicture}[
-            >=Stealth,
-            node/.style={circle, draw, minimum size=8mm, inner sep=0pt},
-            every edge/.style={draw, ->, thick}
-        ]
-            % Nodos
-            \node[node, fill=green] (A) at (0,0) {A};
-            \node[node, fill=green] (B) at (3,0) {B};
-            \node[node, fill=green] (C) at (0,-2) {C};
-            \node[node, fill=green] (D) at (3,-2) {D};
-
-            % Aristas
-            \path
-                (A) edge node[above] {5} (B)
-                (A) edge node[left]  {2} (C)
-                (B) edge node[right] {1} (D)
-                (C) edge node[below] {2} (B)
-                (C) edge node[below] {7} (D);
-        \end{tikzpicture}
-        \end{center}
-    \end{frame}
-
-     \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        \begin{enumerate}
-            \item[3.] Resumen de Resultados para el Trabajo
-        \end{enumerate}
-
-        \vspace{0.25cm}
-        \begin{center}
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \textbf{Nodo} & \textbf{Distancia mínimia nodo $A$} & \textbf{Camino (Predecesores)} \\ \hline
-            $A$ & $0$ & - \\ \hline
-            $B$ & $4$ & $A \rightarrow C \rightarrow B$ \\ \hline
-            $C$ & $2$ & $A \rightarrow C$ \\ \hline
-            $D$ & $5$ & $A \rightarrow C \rightarrow B \rightarrow D$ \\ 
-            \hline
-        \end{tabular}
-        \end{center}
-    \end{frame}
-
-    \begin{frame}{Ejemplo: Desarrollo paso a paso}
-        \begin{enumerate}
-            \item[4.] Conclusiones
-
-            \vspace{0.25cm}
-
-            Para encontrar la ruta más corta en esté grafo, se ha aplicado el algoritmo de Dijkstra de la siguiente forma: Inicialmente, el camino directo de $A$ a $B$ tenía un coste de 5, pero evaluando el nodo $C$, podemos apreciar una ruta alternativa ($A-C-B$) con un coste de 4. Finalmente, para llegar a $D$, la ruta óptima no es la directa desde $C$ (coste 9), es la que pasa por $B$, logrando un coste total de 5.
-        \end{enumerate}
-    \end{frame}
-
-    \section{Explicación del pseudocódigo}
-
-    \begin{frame}{Pseudocódigo del algoritmo}
-        \texttt{
-            \noindent function Dijkstra(Graph, source):\\
-            \qquad dist[source] = 0 \\
-            \qquad for each vertex v in Graph: \\
-            \qquad  \qquad if v != source: \\
-            \qquad \qquad \qquad dist[v] = infinity \\ 
-            \qquad  \qquad add v to Q (unvisited set) \\ 
-            \qquad while Q is not empty: \\
-            \qquad \qquad u = vertex in Q with min dist[u] \\ 
-            \qquad \qquad remove u from Q \\ 
-            \qquad \qquad for each neighbor v of u in Q: \\
-            \qquad \qquad \qquad alt = dist[u] + length(u, v) \\ 
-            \qquad \qquad \qquad if alt < dist[v]: \\
-            \qquad \qquad \qquad \qquad dist[v] = alt \\
-            \qquad \qquad \qquad \qquad prev[v] = u \\
-            \qquad return dist, prev
-        }
-    \end{frame}
+\begin{frame}{Ejemplo: Desarrollo (III)}
+    \textbf{Paso 3: Seleccionamos Nodo B (Distancia 4)}
+    \begin{itemize}
+        \item Vecino de $B$: $D$.
+        \item $D: 4+1=5$. Como $5 < 9$, \textbf{actualizamos D}.
+    \end{itemize}
     
-    \section{Simulación del algoritmo}
+    \vspace{0.2cm}
+    \textbf{Paso 4: Seleccionamos Nodo D (Distancia 5)}
+    \begin{itemize}
+        \item No hay más vecinos no visitados. Algoritmo finalizado.
+    \end{itemize}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        \node[visitado] (A) at (0,0) {A};
+        \node[visitado] (B) at (2.5,0) {B};
+        \node[visitado] (C) at (0,-2) {C};
+        \node[visitado] (D) at (2.5,-2) {D};
+        \path[flecha] (A) edge node[above] {5} (B) (A) edge node[left] {2} (C) (B) edge node[right] {1} (D) (C) edge node[below] {2} (B) (C) edge node[below] {7} (D);
+    \end{tikzpicture}
+\end{frame}
 
-    \begin{frame}{Simulación del algoritmo}
-        En el siguiente enlace encontrarás una simulación \textbf{desarrollada por nosotros} del algoritmo programa en \texttt{react.js}: 
-        \color{blue}\\ 
-        \begin{center}\underline{\url{https://djkistra.vercel.app/}}\color{black}\end{center} 
-        \color{black}
-    \end{frame}
+\begin{frame}{Resumen de Resultados}
+    \begin{table}
+        \centering
+        \begin{tabular}{|c|c|l|}
+            \hline
+            \textbf{Nodo} & \textbf{Distancia Mínima} & \textbf{Camino (Predecesores)} \\ \hline
+            A & 0 & - \\ \hline
+            B & 4 & $A \to C \to B$ \\ \hline
+            C & 2 & $A \to C$ \\ \hline
+            D & 5 & $A \to C \to B \to D$ \\ \hline
+        \end{tabular}
+    \end{table}
+    \begin{block}{Conclusión del ejemplo}
+        La ruta óptima para llegar a $D$ no es la directa, sino pasando por $C$ y $B$, logrando un coste total de 5 frente a opciones más pesadas.
+    \end{block}
+\end{frame}
 
-    \begin{frame}{Explicación del pseudocódigo}
-        El algoritmo de Dijkstra calcula la ruta más corta desde un nodo inicial hacia todos los demás nodos del grafo. Requiere que todas las distancias sean positivas o cero. Su idea principal es seleccionar siempre el nodo no visitado más cercano al origen y actualizar las distancias de sus nodos vecinos si encuentra un camino más corto pasando por él.
-    \end{frame}
+\section{Pseudocódigo}
 
-    \begin{frame}{Explicación del pseudocódigo: línea por línea I}
-        \begin{itemize}
-            \item \texttt{dist[source] = 0}: La distancia para ir del punto de inicio a sí mismo es cero.
-            
-            \item \texttt{for each vertex v in Graph}: Recorre todos los demás puntos o nodos de la red.
-            
-            \item \texttt{dist[v] = infinity}: Como al principio el algoritmo no sabe cómo llegar al resto de nodos, les asigna temporalmente una distancia infinita.
-            
-            \item \texttt{add v to Q}: Introduce todos los nodos en un conjunto llamado \texttt{Q}, que funciona como una lista de tareas de nodos no visitados.
-        \end{itemize}
-    \end{frame}
+\begin{frame}[fragile]{Pseudocódigo del algoritmo}
+\begin{exampleblock}{Función Dijkstra(Grafo, origen)}
+\begin{small}
+\begin{verbatim}
+dist[origen] = 0
+Para cada vértice v en Grafo:
+    Si v != origen:
+        dist[v] = infinito
+    Añadir v a Q (conjunto no visitados)
 
-    \begin{frame}{Explicación del pseudocódigo: línea por línea II}
-        \begin{itemize}
-            \item \texttt{while Q is not empty}: El proceso se repite en bucle hasta que la lista de nodos no visitados quede vacía.
-            
-            \item \texttt{u = vertex in Q with min dist[u]}: Selecciona de la lista el nodo que tenga la menor distancia acumulada. En la primera iteración, este será necesariamente el nodo origen.
-            
-            \item \texttt{remove u from Q}: Elimina ese nodo de la lista para marcarlo oficialmente como visitado.
-            
-            \item \texttt{for each neighbor v of u in Q}: Revisa únicamente los nodos vecinos de \texttt{u} que todavía no hayan sido visitados.
-        \end{itemize}
-    \end{frame}
+Mientras Q no esté vacío:
+    u = vértice en Q con mínima dist[u]
+    Eliminar u de Q
+    Para cada vecino v de u todavía en Q:
+        alt = dist[u] + peso(u, v)
+        Si alt < dist[v]:
+            dist[v] = alt
+            prev[v] = u
+Devolver dist, prev
+\end{verbatim}
+\end{small}
+\end{exampleblock}
+\end{frame}
 
-    \begin{frame}{Explicación del pseudocódigo: línea por línea III}
-        \begin{itemize}
-            \item \texttt{alt = dist[u] + length(u, v)}: Calcula la longitud de una posible nueva ruta hasta \texttt{v}, sumando la distancia ya conocida hasta \texttt{u} más el peso de la arista entre \texttt{u} y \texttt{v}.
-            
-            \item \texttt{if alt < dist[v]}: Este es el núcleo del algoritmo. Comprueba si la nueva distancia calculada es menor que la mejor distancia conocida hasta ese momento para llegar a \texttt{v}.
-            
-            \item \texttt{dist[v] = alt} y \texttt{prev[v] = u}: Si la nueva ruta es mejor, se actualiza la distancia mínima registrada y se guarda que el nodo anterior óptimo para llegar a \texttt{v} es \texttt{u}.
-        \end{itemize}
-    \end{frame}
+\section{Simulación y Conclusiones}
 
-    \begin{frame}{Resultado final del algoritmo}
-        \begin{itemize}
-            \item \texttt{return dist, prev}: El algoritmo finaliza devolviendo dos estructuras:
-            \begin{itemize}
-                \item \texttt{dist}, que contiene la distancia mínima desde el nodo origen hasta cada nodo del grafo.
-                \item \texttt{prev}, que permite reconstruir el camino más corto seguido para llegar a cada nodo.
-            \end{itemize}
-        \end{itemize}
-        
+\begin{frame}{Simulación del algoritmo}
+    Hemos desarrollado una simulación interactiva en \texttt{React.js} para visualizar este proceso: 
+    
+    \vspace{0.6cm}
+    \begin{center}
+        \huge
+        \href{https://djkistra.vercel.app/}{\color{blue}\underline{Acceder a la Simulación}}
+    \end{center} 
+\end{frame}
+
+\begin{frame}{Conclusiones}
+    \begin{itemize}
+        \item El algoritmo de Dijkstra es fundamental para la optimización de rutas.
+        \item Su eficiencia depende de la estructura de datos utilizada (Heaps).
+        \item Es la base de tecnologías que usamos a diario como GPS y protocolos de internet.
+        \item Garantiza la solución óptima siempre que los pesos sean no negativos.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Bibliografía y webgrafía}
+    \begin{itemize}
+        \item \textbf{Blog}: Byte, L. (2024). El Algoritmo de Dijkstra. CodigoNautas. \\ \url{https://codigonautas.com/algoritmo-dijkstra-que-es-ejemplo/}
         \vspace{0.3cm}
-        Gracias a estas dos estructuras, no solo se conoce cuánto cuesta llegar a cada punto, sino también cuál es la ruta exacta que debe seguirse.
-    \end{frame}
+        \item \textbf{Video}: Gomez, J. A. (2012). Algoritmo de Dijkstra - Teoría de Grafos. YouTube. \\ \url{https://www.youtube.com/watch?v=fgdCNuGPJnw}
+    \end{itemize}
+\end{frame}
 
-    \section{Conclusiones}
-
-    \begin{frame}{Conclusiones}
-
-    \end{frame}
-
-    \section{Bibliografía y webgrafía}
-
-    \begin{frame}{Bibliografía y webgrafía}
-        \begin{itemize}
-            \item \textbf{Sitio web (Artículo de blog)}: Byte, L. (2024, 24 de octubre). El Algoritmo de Dijkstra: Qué es, Cómo Funciona y Dónde se utiliza. CodigoNautas. \color{blue}\underline{\url{https://codigonautas.com/algoritmo-dijkstra-que-es-ejemplo/}}\color{black}.
-
-            \item \textbf{Video de YouTube}: Gomez, J. A. (2012, 6 de agosto). Algoritmo de Dijkstra (1) - Teoría de Grafos [Video]. YouTube. \color{blue}\underline{\url{https://www.youtube.com/watch?v=fgdCNuGPJnw}}\color{black}.
-        \end{itemize}
-    \end{frame}
 \end{document}

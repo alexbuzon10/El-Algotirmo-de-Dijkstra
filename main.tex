@@ -104,12 +104,12 @@
     \section{Descripción del algoritmo}
 
     \begin{frame}{Descripción del algoritmo}
-        El algorimo de Dijkstra es un algorimo basado en la teoría de grafos. Un grafo, en informática es  es simplemente una estructura visual que representa las relaciones entre distintos elementos y está formada por dos piezas clave: 
+        El algorimo de Dijkstra es un algorimo basado en la teoría de grafos. Un grafo, en informática es simplemente una estructura visual que representa las relaciones entre distintos elementos y está formada por dos piezas clave: 
         \begin{itemize}
             \item \textbf{vértices (o nodos)}.
-            \item \textbf{Aristas}
+            \item \textbf{aristas}
         \end{itemize}
-        Existen un tipo de grado denominado \textbf{grafo ponderado} donde , a cada arista se le asigna un valor numérico llamado \textbf{"peso"} (o coste), que indica la importancia o peso que tiene la misma.
+        Existen un tipo de grado denominado \textbf{grafo ponderado} donde, a cada arista se le asigna un valor numérico llamado \textbf{``peso"} (o coste), que indica el esfuerzo, la distancia, el tiempo o el gasto necesario para viaja de un vértice a otro a través de una arista. 
     \end{frame}
 
     \begin{frame}{Descripción del algoritmo}
@@ -121,14 +121,14 @@
         \vspace{0.25cm}
 
         Su algoritmo opera bajo la condición de que todos los pesos de la red sean positivos y
-        utiliza una estrategia progresiva de "pasos seguros" para explorar las rutas desde un
+        utiliza una estrategia progresiva de ``pasos seguros" para explorar las rutas desde un
         origen:
     \end{frame}
 
     \begin{frame}{Descripción del algoritmo}
         \begin{enumerate}
             \item \textbf{Inicialización}: Comienza en el punto de partida asumiendo que la distancia al
-            resto de vértices es "infinita", ya que aún no ha explorado el terreno.
+            resto de vértices es ``infinita", ya que aún no ha explorado el terreno.
             \item \textbf{Elección}: En cada iteración, selecciona el nodo no visitado que presenta el
             menor coste acumulado.
             \item \textbf{Relajación}: Desde esa posición, evalúa a sus vecinos directos. Si descubre un
@@ -189,7 +189,7 @@
 
     \begin{frame}{Condiciones y Complejidad}
         \textbf{Condición de pesos no negativos}\\
-        Requiere que la función de peso sea $w:E\rightarrow\mathbb{R}^{+}$. Pesos negativos invalidarían la estrategia \textit{greedy}, ya que una distancia "finalizada" podría reducirse posteriormente por un arco negativo.
+        Requiere que la función de peso sea $w:E\rightarrow\mathbb{R}^{+}$. Pesos negativos invalidarían la estrategia \textit{greedy}, ya que una distancia ``finalizada" podría reducirse posteriormente por un arco negativo.
         
         \vspace{0.3cm}
         \textbf{Complejidad computacional}
